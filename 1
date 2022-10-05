@@ -1,0 +1,16 @@
+int a = 3;
+void setup() {
+  pinMode(a, OUTPUT);
+}
+
+void loop() {
+  for (int i = 1000; i > 0; i = i - 15) {
+    blin(a, i);
+  }
+}
+void blin(int pinLed, int tim) {
+  digitalWrite(pinLed, 1);
+  delay(tim);
+  digitalWrite(pinLed, 0);
+  delay(tim);
+}
