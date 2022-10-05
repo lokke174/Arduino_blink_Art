@@ -1,10 +1,13 @@
-int a = 3;
+iint a = 3, btn1 = 10;
 void setup() {
   pinMode(a, OUTPUT);
+  pinMode(10, INPUT);
+
 }
 
 void loop() {
   for (int i = 1000; i > 0; i = i - 15) {
+    if(digitalRead(btn1))
     blin(a, i);
   }
 }
